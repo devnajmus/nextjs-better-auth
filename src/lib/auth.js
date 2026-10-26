@@ -1,6 +1,12 @@
+import { setServers } from "node:dns";
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
+
+// Use working DNS for Atlas SRV queries on this development network.
+if (process.env.NODE_ENV === "development") {
+  setServers(["8.8.8.8", "8.8.4.4"]);
+}
 
 const client = new MongoClient(process.env.BETTER_AUTH_DB_URL);
 const db = client.db('better-auth-db');

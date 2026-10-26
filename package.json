@@ -22,8 +22,8 @@
     "@gravity-ui/icons": "^2.22.0",
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.6",
+    "eslint": "^10",
+    "eslint-config-next": "16.4.3",
     "tailwindcss": "^4"
   }
 }
